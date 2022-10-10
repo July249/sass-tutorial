@@ -13,6 +13,7 @@
 
 - At the beginning of this lecture, you should set file structure like below.
 
+```
 responsive-design-beginners
 	ㄴ app
 	|	ㄴ js
@@ -21,7 +22,7 @@ responsive-design-beginners
 	ㄴ .gitattributes
 	ㄴ index.html
 	ㄴ LICENSE 
-
+```
 
 ### Step 1. Install "live sass compiler" extension, which is made by "Glenn Marks"
 
