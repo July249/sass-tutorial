@@ -4,9 +4,29 @@
   grid-template-rows: auto auto;
   gap: 40px;
 
+  // min-width: 900px => it means applying the styles over than 900px.
+  // max-width: 900px => it means applying the styles less than 900px.
+
+  // Tip
+  // Most website design is required mobile first!
+  // And Mobile mode is more simple than Desktop mode.
+  // So, usually design mobile first. After then, add media queries for Desktop mode.
+  // Therefore, generally recommanded using "min-width" more than "max-width".
+  @media (min-width: 900px) {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  &__main,
+  &__sidebar {
+    padding: 40px;
+  }
+
   &__main {
+    background-color: hsl(240, 99%, 33%);
   }
 
   &__sidebar {
+    background-color: hsl(300, 100%, 30%);
   }
 }
