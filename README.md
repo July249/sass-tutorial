@@ -13,15 +13,17 @@
 
 - At the beginning of this lecture, you should set file structure like below.
 
+```
 responsive-design-beginners
 	ㄴ app
-	|	ㄴ js
-	|	ㄴ scss
-	|		ㄴ style.scss
+	|   ㄴ js
+	|       ㄴ script.js
+	|   ㄴ scss
+	|       ㄴ style.scss
 	ㄴ .gitattributes
 	ㄴ index.html
 	ㄴ LICENSE 
-
+```
 
 ### Step 1. Install "live sass compiler" extension, which is made by "Glenn Marks"
 
@@ -69,7 +71,8 @@ responsive-design-beginners
 - To make it sure, type or paste below code on "style.scss"
 
 ```scss
-
+// This code is temporary testing code.
+// It could be replaced whatever you want!
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: hsl(0, 0%, 26%);
