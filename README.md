@@ -69,7 +69,8 @@ responsive-design-beginners
 - To make it sure, type or paste below code on "style.scss"
 
 ```scss
-
+// This code is temporary testing code.
+// It could be replaced whatever you want!
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: hsl(0, 0%, 26%);
