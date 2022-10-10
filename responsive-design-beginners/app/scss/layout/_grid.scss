@@ -3,18 +3,32 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   gap: 40px;
+  // The overall width of the design element does not equal the viewport width, and max-width is applied to the overall layout for the purpose of providing convenience to the user by positioning the optimized width.
+  // max-width: 1000px;
 
-  // min-width: 900px => it means applying the styles over than 900px.
-  // max-width: 900px => it means applying the styles less than 900px.
+  // MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/margin-inline
+  // This property corresponds to the margin-top and margin-bottom, or the margin-right and margin-left properties, depending on the values defined for writing-mode, direction, and text-orientation.
+  // For writing-mode is "horizontal-tb", margin-inline: "margin-left" "margin-right";
+  // For writing-mode is "vertical-rl", margin-inline: "margin-top" "margin-bottom";
+  margin-inline: auto;
+  // defaultly set: writing-mode: horizontal-tb;
+  // writing-mode: vertical-rl;
 
-  // Tip
-  // Most website design is required mobile first!
-  // And Mobile mode is more simple than Desktop mode.
-  // So, usually design mobile first. After then, add media queries for Desktop mode.
-  // Therefore, generally recommanded using "min-width" more than "max-width".
+  // Independently set padding-left, padding-right 20px each
+  // width: min(100%, 1000px);
+
+  // Consider the width without padding-left and padding-right 20px each
+  // So, subtract 40px from 100%
+  width: min(100% - 40px, 1000px);
+
   @media (min-width: 900px) {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
+    padding: 0;
+  }
+
+  @media (max-width: 899px) {
+    padding: 0 20px;
   }
 
   &__main,
