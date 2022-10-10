@@ -1,34 +1,16 @@
+@use '../util' as u;
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   gap: 40px;
-  // The overall width of the design element does not equal the viewport width, and max-width is applied to the overall layout for the purpose of providing convenience to the user by positioning the optimized width.
-  // max-width: 1000px;
-
-  // MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/margin-inline
-  // This property corresponds to the margin-top and margin-bottom, or the margin-right and margin-left properties, depending on the values defined for writing-mode, direction, and text-orientation.
-  // For writing-mode is "horizontal-tb", margin-inline: "margin-left" "margin-right";
-  // For writing-mode is "vertical-rl", margin-inline: "margin-top" "margin-bottom";
-  margin-inline: auto;
-  // defaultly set: writing-mode: horizontal-tb;
-  // writing-mode: vertical-rl;
-
-  // Independently set padding-left, padding-right 20px each
-  // width: min(100%, 1000px);
-
-  // Consider the width without padding-left and padding-right 20px each
-  // So, subtract 40px from 100%
   width: min(100% - 40px, 1000px);
+  margin-inline: auto;
 
-  @media (min-width: 900px) {
+  @include u.breakpoint(large) {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
-    padding: 0;
-  }
-
-  @media (max-width: 899px) {
-    padding: 0 20px;
   }
 
   &__main,
@@ -37,10 +19,49 @@
   }
 
   &__main {
+    // apply "blue color" less than 700px
     background-color: hsl(240, 99%, 33%);
+
+    /* @include u.breakpoint(medium) {
+      // apply "green color" over than 700px and less than 900px
+      background-color: hsl(120, 100%, 25%);
+    } */
+
+    @include u.breakpoint(large) {
+      // apply "orange color" over than 900px
+      background-color: hsl(39, 100%, 50%);
+    }
+
+    // reversed order - to check cascading
+    // In this case, the background-color is applied only green color!
+    // Not applied orange color no more! => this is cascading effect!
+    @include u.breakpoint(medium) {
+      // apply "green color" over than 700px
+      background-color: hsl(120, 100%, 25%);
+    }
   }
 
   &__sidebar {
     background-color: hsl(300, 100%, 30%);
+    // apply "text-align: center" less than "width: 900px"
+    text-align: center;
+
+    /* @include u.breakpoint(large) {
+      // apply "text-align: left" over than "width: 900px"
+      text-align: left;
+    } */
+
+    /* @media (min-width: 56.25em) {
+      text-align: left;
+    } */
+
+    @include u.breakpoint-down(medium) {
+      // apply "text-align: right" less than "width: 899.98px"
+      text-align: right;
+    }
+
+    /* @media (max-width: 56.24875em) {
+      text-align: right;
+    } */
   }
 }
