@@ -16,9 +16,10 @@
 ```
 responsive-design-beginners
 	ㄴ app
-	|	ㄴ js
-	|	ㄴ scss
-	|		ㄴ style.scss
+	|   ㄴ js
+	|       ㄴ script.js
+	|   ㄴ scss
+	|       ㄴ style.scss
 	ㄴ .gitattributes
 	ㄴ index.html
 	ㄴ LICENSE 
