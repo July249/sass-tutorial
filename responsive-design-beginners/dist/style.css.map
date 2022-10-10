@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [
+    "../app/scss/style.scss"
+  ],
+  "names": [],
+  "mappings": "AAAA,KACE,sCAAA,CACA,wBAAA,CACA,UAAA",
+  "file": "style.css"
+}
