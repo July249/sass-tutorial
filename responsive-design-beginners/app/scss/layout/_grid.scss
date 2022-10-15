@@ -7,8 +7,9 @@
   gap: 40px;
   width: min(100% - 40px, 1000px);
   margin-inline: auto;
+  font-size: 2em;
 
-  @include u.breakpoint(large) {
+  @include u.breakpoint-up(large) {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
   }
@@ -27,7 +28,7 @@
       background-color: hsl(120, 100%, 25%);
     } */
 
-    @include u.breakpoint(large) {
+    @include u.breakpoint-up(large) {
       // apply "orange color" over than 900px
       background-color: hsl(39, 100%, 50%);
     }
@@ -35,7 +36,7 @@
     // reversed order - to check cascading
     // In this case, the background-color is applied only green color!
     // Not applied orange color no more! => this is cascading effect!
-    @include u.breakpoint(medium) {
+    @include u.breakpoint-up(medium) {
       // apply "green color" over than 700px
       background-color: hsl(120, 100%, 25%);
     }
