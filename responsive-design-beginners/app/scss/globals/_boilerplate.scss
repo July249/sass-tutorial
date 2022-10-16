@@ -3,6 +3,8 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
+  // font-size: 62.5%;
+  // why 62.5%?? initial font-size set value is 16px! so, 16px * 0.625 = 10px!!
 }
 
 *,
@@ -17,7 +19,7 @@ body {
   font-family: u.$font;
   background-color: var(--background-color);
   color: var(--text-color);
-  font-size: 1.5em;
+  // font-size: 1.5em;
   // display: flex;
   // justify-content: center;
 }

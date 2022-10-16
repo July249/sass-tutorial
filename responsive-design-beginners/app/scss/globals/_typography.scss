@@ -9,8 +9,9 @@ h3 {
 }
 
 h1 {
+  font-size: clamp(u.rem(28), u.rem(16) + 2vw, u.rem(40));
   // font-size: clamp(28px, 16px + 2vw, 40px);
-  font-size: clamp(1.75rem, 1rem + 2vw, 2.5rem);
+  // font-size: clamp(1.75rem, 1rem + 2vw, 2.5rem);
   // font-size: calc(16px + 2vw); // add 16px to fix the minimum font-size
   // font-size: 7.5vw; // 7.5% = 28px / 375px(iPhone11Pro width size)
 
@@ -24,13 +25,14 @@ h1 {
 }
 
 h2 {
-  // font-size: clamp(22px, 14px + 1.5vw, 36px);
-  font-size: clamp(1.375rem, 0.875rem + 1.5vw, 2.25rem);
+  font-size: clamp(u.rem(22), u.rem(14) + 1.5vw, u.rem(36));
+  // font-size: clamp(1.375rem, 0.875rem + 1.5vw, 2.25rem);
 }
 
 p {
   margin-top: 0;
-  font-size: 1em;
+  font-size: u.rem(16);
+  // font-size: 1rem;
 }
 
 a,
